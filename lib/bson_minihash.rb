@@ -61,7 +61,7 @@ module BSONMiniHash
     def self.bson_obj(packed_str)
       case self.bson_lib
         when :bson
-          BSON::Binary.new(packed_str, :user)
+          BSON::Binary.new(packed_str)
         when :moped
           Moped::BSON::Binary.new(:user, packed_str)
       end
